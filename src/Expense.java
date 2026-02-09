@@ -15,7 +15,6 @@ public class Expense {
     }
 
     public String toString(){
-        System.out.println("------- EXPENSE -------");
         return("£" + amount + " " + category + " " + description + " " + date);
 
     }
