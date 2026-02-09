@@ -1,8 +1,17 @@
+import java.time.LocalDate; // import the LocalDate class
+
 public class Expense {
     private double amount;
-    private String[] category;
+    private String category;
     private String description;
-    private String date;
+    private LocalDate date;
 
+    public Expense(double amount, String category, String description){
+        this.amount = amount;
+        this.category = category;
+        this.description = description;
+        date = LocalDate.now();
+
+    }
 
 }
