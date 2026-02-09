@@ -16,8 +16,11 @@ public class Expense {
 
     public String toString(){
         return("£" + amount + " " + category + " " + description + " " + date);
-
     }
+    public double getAmount(){
+        return amount;
+    }
+
 
 
 

@@ -12,7 +12,13 @@ public class ExpenseTracker {
             System.out.println(e.toString());
         }
     }
-
+    public void total(){
+        double total = 0;
+        for(Expense e:expenses){
+            total += e.getAmount();
+        }
+        System.out.println("TOTAL: £" + String.format("%.2f", total));
+    }
     public void filter(){
 
     }

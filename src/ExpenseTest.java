@@ -15,5 +15,7 @@ public class ExpenseTest {
         expenseTracker.addExpenses(ex5);
 
         expenseTracker.view();
+
+        expenseTracker.total();
     }
 }
