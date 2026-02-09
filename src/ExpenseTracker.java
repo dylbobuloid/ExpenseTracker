@@ -7,7 +7,9 @@ public class ExpenseTracker {
     }
 
     public void view(){
-
+        for(Expense e:expenses){
+            System.out.println(e.toString());
+        }
     }
 
     public void filter(){
