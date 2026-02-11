@@ -46,6 +46,10 @@ public class ExpenseTracker {
 
     }
 
+    public void categoryReport(){
+
+    }
+
 
     public void save() {
 
