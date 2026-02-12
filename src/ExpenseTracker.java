@@ -1,4 +1,6 @@
 import java.util.ArrayList; // Import the ArrayList class
+import java.util.HashSet;
+import java.util.Set;
 
 public class ExpenseTracker {
     ArrayList<Expense> expenses = new ArrayList<>(); // Create an ArrayList object
@@ -47,7 +49,27 @@ public class ExpenseTracker {
     }
 
     public void categoryReport(){
+        Set<String> distinctCategories = new HashSet<>();
 
+        for (Expense e : expenses) {
+            if(!(distinctCategories.contains(e.getCategory()))){
+                distinctCategories.add(e.getCategory());
+            }
+        }
+
+        for(String c: distinctCategories){
+            System.out.println("------- " + c + " EXPENSE(S) -------");
+            double total = 0;
+            for(Expense e: expenses){
+                if(e.getCategory().equals(c)){
+                    System.out.println(e.toString());
+                    total += e.getAmount();
+
+                }
+            }
+            System.out.println("TOTAL: £" + String.format("%.2f", total));
+
+        }
     }
 
 

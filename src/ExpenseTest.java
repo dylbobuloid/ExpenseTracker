@@ -20,6 +20,7 @@ public class ExpenseTest {
 
         //expenseTracker.total();
 
-        expenseTracker.filter("Bills");
+        //expenseTracker.filter("Bills");
+        expenseTracker.categoryReport();
     }
 }
