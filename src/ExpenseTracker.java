@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList; // Import the ArrayList class
 public class ExpenseTracker {
     ArrayList<Expense> expenses = new ArrayList<>(); // Create an ArrayList object
@@ -23,8 +26,12 @@ public class ExpenseTracker {
 
     }
 
-    public void save(){
-
+    public void save(String filename) throws FileNotFoundException, UnsupportedEncodingException, FileNotFoundException {
+        PrintWriter writer = new PrintWriter(filename, "UTF-8");
+        for(Expense e: expenses){
+            writer.println(e.toString());
+        }
+        writer.close();
     }
 
     public void load(){
