@@ -14,6 +14,14 @@ public class Expense {
 
     }
 
+    public Expense(double amount, String category, String description, LocalDate date){
+        this.amount = amount;
+        this.category = category;
+        this.description = description;
+        this.date = date;
+
+    }
+
     public String getCategory() {
         return category;
     }

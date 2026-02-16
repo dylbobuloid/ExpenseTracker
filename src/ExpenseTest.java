@@ -1,6 +1,9 @@
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+
 public class ExpenseTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         ExpenseTracker expenseTracker = new ExpenseTracker();
         Expense ex1 = new Expense(20, "Bills", "Electricity and Water bill");
         Expense ex2 = new Expense(11.30, "Travel", "To Guilford by train");
@@ -16,11 +19,12 @@ public class ExpenseTest {
         expenseTracker.addExpenses(ex5);
         expenseTracker.addExpenses(ex6);
 
-        //expenseTracker.view();
+        expenseTracker.view();
 
         //expenseTracker.total();
 
         //expenseTracker.filter("Bills");
-        expenseTracker.categoryReport();
+        //expenseTracker.save("Test");
+        //expenseTracker.load("Test");
     }
 }
