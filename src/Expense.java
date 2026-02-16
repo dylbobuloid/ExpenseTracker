@@ -14,8 +14,12 @@ public class Expense {
 
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public String toString(){
-        return("£" + amount + " " + category + " " + description + " " + date);
+        return("£" + amount + " | " + category + " | " + description + " | " + date);
     }
     public double getAmount(){
         return amount;
